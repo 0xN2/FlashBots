@@ -36,25 +36,28 @@ Simulation and Broadcasting: The script simulates the bundle to check for errors
 Prerequisites
 
 ### Environment Variables:
+```bash
 ALCHEMY: Your Alchemy API key for the Sepolia testnet.
 SPONSOR_KEY: The private key of a wallet that will sponsor the gas fees.
 COMPROMISED_KEY: The private key of the compromised wallet.
+```
 
 
-
-Run the Scripts
-First Script (Monitoring and ETH Transfer):
-
-bash´´´ 
-
-node monitoring-attack.js
+### Run the Scripts
+First Script (Bot Monitor)
 This script will start monitoring the compromised wallet for incoming ETH.
-´´´ 
+
+```bash
+ node monitoring-attack.js
+```
+
+
 
 Second Script (Flashbots Bundle):
-
-bash
-node flashbots-rescue.js
 This script will send a bundle of transactions to transfer ETH to the compromised wallet and simultaneously transfer tokens out.
 
+
+```bash
+node flashbots-rescue.js
+```
 
